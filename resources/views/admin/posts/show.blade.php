@@ -1,19 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <div class="card w-50 mx-auto">
-            <div class="card-header p-0">
-                <img src="{{ $post->post_image }}" class="w-100" alt="">
+    <div class="card mb-3 mx-auto" style="max-width: 800px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{ $post->post_image }}" class="img-fluid rounded-start" alt="...">
             </div>
-            <div class="card-body text-center">
-                <div>
-                    <h3 class="card-title py-2">{{ $post->title }}</h3>
+            <div class="col-md-8">
+                <div class="card-body text-center">
+                    <h3 class="card-title">{{ $post->title }}</h3>
+                    <p class="card-text">{{ $post->post_content }}</p>
+                    <pre>{{ $post->author }} | {{ $post->post_date }}</pre>
                 </div>
-                <p class="card-text">{{ $post->post_content }}</p>
-            </div>
-            <div class="card-footer text-muted">
-                <pre>{{ $post->author }} | {{ $post->post_date }}</pre>
             </div>
         </div>
     </div>

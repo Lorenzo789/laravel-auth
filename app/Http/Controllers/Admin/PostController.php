@@ -29,6 +29,8 @@ class PostController extends Controller
     public function create()
     {
         //
+        $post = new Post();
+        
     }
 
     /**
